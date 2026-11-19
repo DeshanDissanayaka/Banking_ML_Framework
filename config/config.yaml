@@ -1,0 +1,30 @@
+project:
+  name: loan_default_baseline
+  task: classification
+  random_state: 42
+
+data:
+  source_type: csv
+  path: data/raw/loan_data.csv
+  target: default_flag
+  id_columns: [customer_id, account_id]
+  date_column: application_date
+  positive_label: 1
+  drop_columns: []
+
+split:
+  strategy: stratified_random
+  test_size: 0.20
+  validation_size: 0.20
+
+training:
+  model: random_forest
+  threshold: 0.50
+  artifact_dir: artifacts
+  model_path: artifacts/models/model.joblib
+  metrics_path: artifacts/metrics/test_metrics.json
+  predictions_path: data/predictions/predictions.csv
+
+logging:
+  level: INFO
+  path: logs/project.log

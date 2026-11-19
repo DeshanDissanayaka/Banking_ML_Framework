@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: banking-ml-framework
+Version: 0.1.0
+Summary: Reusable banking machine learning framework
+Requires-Python: >=3.10
+Dynamic: requires-python
+Dynamic: summary

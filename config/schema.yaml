@@ -1,0 +1,7 @@
+required_columns:
+  - customer_id
+  - default_flag
+target:
+  name: default_flag
+  allowed_values: [0, 1]
+  positive_value: 1

@@ -1,0 +1,10 @@
+services:
+  banking-ml-api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../artifacts:/app/artifacts:ro
+      - ../config:/app/config:ro
